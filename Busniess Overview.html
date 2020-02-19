@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Lim jae sin, Ha Sung Hyeok">
+
+    <link rel="icon" href="https://static.wixstatic.com/media/3396c4_b0f4a60d804944e38db02e54aa652426%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/3396c4_b0f4a60d804944e38db02e54aa652426%7Emv2.png" type="image/png"/>
+    <title>Cloudike Business Product Overview</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="sidebar.css" rel="stylesheet">
+
+    <style type="text/css" > 
+
+    #wrapper {
+        padding-left: 0;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+    #wrapper.toggled {
+        padding-left: 250px;
+    }
+
+    #sidebar-wrapper {
+        z-index: 1000;
+        position: fixed;
+        left: 250px;
+       width: 0;
+        height: 100%;
+        margin-left: -250px;
+        overflow-y: auto;
+        background: #000;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 340px;
+    }
+
+    #page-content-wrapper {
+        width: 100%;
+        position: absolute;
+        padding: 15px;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: absolute;
+        margin-right: -250px;
+    }
+
+    /* Sidebar Styles */
+
+    .sidebar-nav {
+        position: absolute;
+        top: 0;
+        width: 340px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .sidebar-nav li {
+        text-indent: 25px;
+        line-height: 50px;
+    }
+
+    .sidebar-nav li a {
+        display: block;
+        text-decoration: none;
+    }
+
+    .sidebar-nav li a:hover {
+        text-decoration: none;
+        color: #333333;
+        background: #efefef;
+    }
+
+    .sidebar-nav li a:visited {
+        text-decoration: none;
+        color: #333333;
+        background: #efefef;
+    }
+
+    .sidebar-nav li a:active,
+    .sidebar-nav li a:focus {
+        text-decoration: none;
+        background: #efefef;
+    }
+
+    .sidebar-nav > .sidebar-brand {
+        height: 65px;
+        font-size: 18px;
+        line-height: 60px;
+    }
+
+    .sidebar-nav > .sidebar-brand a {
+        
+    }
+
+    .sidebar-nav > .sidebar-brand a:hover {
+        color: #fff;
+        background: none;
+    }
+
+    @media(min-width:768px) {
+        #wrapper {
+            padding-left: 420px;
+            padding-right: 100px;
+        }
+
+        #wrapper.toggled {
+            padding-left: 0;
+        }
+
+        #sidebar-wrapper {
+            width: 340px;
+        }
+
+        #wrapper.toggled #sidebar-wrapper {
+            width: 0;
+        }
+
+        #page-content-wrapper {
+            padding: 20px;
+            position: relative;
+        }
+
+        #wrapper.toggled #page-content-wrapper {
+            position: relative;
+            margin-right: 0;
+        }
+
+    }
+
+    .li_noStyle {
+        list-style: none;
+    }
+
+    .li_numberStyle {
+        list-style: decimal;
+    }
+
+    .li_disc {
+        list-style: disc;
+    }
+
+    .li_circle {
+        list-style: circle;
+    }
+
+    .font_style1 {
+        color: #fff;
+    }
+
+    .font_style2 {
+        font-size: 18px;
+        font-family: 'Roboto', serif;
+        font-weight: 500;
+        color: rgb(51,51,51);
+    }
+
+    .font_style2_1 {
+        font-size: 18px;
+        font-family: 'Roboto', serif;
+        font-weight: 400;
+        color: rgb(102,102,102);
+    }
+
+    .font_style3_1 {
+        font-family: 'Roboto', serif;
+        font-size: 15px;
+        font-weight: 400;
+        color: #666666;
+    }
+
+    .font_style3_2 {
+        font-size: 18px;
+        font-weight: bold;
+        color: #666666;
+    }
+    
+    /* sidebar-left shado */
+    .shadow {
+        box-shadow: 60px 0 50px -90px #333333;
+    }
+
+    .bd {
+
+        vertical-align: bottom;
+    }
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" style="overflow:hidden;">
+        <div class="container-fluid" style="background:#170B3B;">
+       
+
+            <button type="button" class="navbar-toggle collapsed menu-toggle" style="margin-top:15px;background:#ffffff">
+                <span class="sr-only" style="">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <img src="cloudike_logo.png" align="left" width="40px" height="50px" style="padding-top:15px;"> 
+            <p class="NOnavbar-brand font_style1" href="#" style="padding-top:15px;font-size:25px;font-family: 'Roboto', serif;font-weight: 400;" >&nbsp; Cloudike business overview </p>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            </div>
+
+        </div>
+    </nav>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper" class="shadow" style="background:#FFFFFF;">
+
+            <ul class="sidebar-nav">
+                <br><br><br><br><br>
+                <li>
+                    <a href="#feature_overview" class="font_style2">Feature Overview </a>
+                </li>
+                <li>
+                    <a href="#product_overview" class="font_style2"> Product-level feature Overview </a>
+
+                </li>
+                <li>
+                    <a href="#admin_feature" class="font_style2_1" onMouseOver='this.innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Company administrator features "' onMouseOut='this.innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Company administrator features"'>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Company administrator features</a>
+                </li>
+                <li>
+                    <a href="#user_feature" class="font_style2_1" onMouseOver='this.innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| End-user features "' onMouseOut='this.innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End-user features"'>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End-user features</a>
+                </li>
+                <li>
+                    <a href="#security1" class="font_style2_1" onMouseOver='this.innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Security & Etc "' onMouseOut='this.innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Security & Etc"'>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Security & Etc</a>
+                </li>
+                <li>
+                    <a href="#pc_client"  class="font_style2">PC Client features</a>
+                </li>
+                <li>
+                    <a href="#app_client" class="font_style2">Mobile / Tablet features</a>
+                </li>
+                <li>
+                    <a href="#web" class="font_style2">Web interface features</a>
+                </li>
+                <li>
+                    <a href="#dashboard" class="font_style2_1" onMouseOver='this.innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Dashboard & files "' onMouseOut='this.innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dashboard & files"'>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dashboard & files</a>
+                </li>
+                <li>
+                    <a href="#management" class="font_style2_1" onMouseOver='this.innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Management & log "' onMouseOut='this.innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Management & log"'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Management & log</a>
+                </li>
+                <li>
+                    <a href="#security2" class="font_style2">Security & Reliability features </a>
+                </li>
+                <li>
+                    <a href="#api_summary" class="font_style2">API Summary </a>
+                </li> 
+            </ul>
+
+                <table height=98% style="margin-left:20px;"> <td class="bd" style=" font-family: 'Roboto', serif;font-size:15px;font-weight: 400;color :rgb(153,153,153);"> version 1.4 </td></table> 
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12" style="padding-top:0px;">
+                    <!--<a href="#menu-toggle" class="btn btn-default menu-toggle">Toggle Menu</a>-->
+                    
+                    <p id="feature_overview"> </p>
+                    <br><br><br>
+                    <p style=" font-family: 'Roboto', serif;font-size:36px;font-weight: 400;color :rgb(51,51,51);">Feature Overview</p>
+                    <br>
+
+                    <table>
+                        <tr>
+                            <td><img src="overview-feature-overview.png" style="max-width:100%"></td>
+                        </tr>                   
+                    </table>
+
+                    <!--<img src="main.png" width=75% hegiht=16.3%>-->
+                    <br><br>
+
+                    <p class="font_style3_1"> Cloudike for Business is a brandable (white label) Cloud Storage platform, 
+                   targeted for on-premise dedicated deployment as a Corporate Dropbox. </p>
+               
+                   <p class="font_style3_1"> The main target customers for Cloudike Enterprise are: Large enterprises requiring internal Dropbox substitute, 
+                    with enhanced security, user management and <br> integration possibilities. </p>
+
+                    <br>
+                    <p class="font_style3_2">Cloudike’s main differentiators:</p>
+
+                    <ul>
+                    <li class="font_style3_1 li_numberStyle"><p>Advanced UX dramatically reduce a learning curve</p></li>
+                
+                    <li class="font_style3_1 li_numberStyle"><p>AD/LDAP integration</p></li>
+                    <li class="font_style3_1 li_numberStyle"><p>Auto Sync - If there’s a change, Cloudike will update those changes from one device to all other connected devices</p></li>
+                    <li class="font_style3_1 li_numberStyle"><p>User management</p></li>
+                    <ul>
+                       <li class="font_style3_1 li_disc"> <p> Team management </p></li>
+                       <li class="font_style3_1 li_disc"> <p> Group management </p></li>
+                    </ul>
+
+                     <li class="font_style3_1 li_numberStyle"><p>Shared folders and files monitoring</p></li>
+                     <li class="font_style3_1 li_numberStyle"><p>Company-wide Advanced security policies</p></li>
+                    <ul>
+                       <li class="font_style3_1 li_disc"> <p> Automatic logout timers </p></li>
+                       <li class="font_style3_1 li_disc"> <p> Sharing perimeter(inside/outside of company) </p></li>
+                       <li class="font_style3_1 li_disc"> <p> Password-expiration policy</p></li>
+                    </ul>
+
+                     <li class="font_style3_1 li_numberStyle"><p>Company-wide Audit log</p></li>
+                     <li class="font_style3_1 li_numberStyle"><p>Company-wide Folders/Group workspaces</p></li>
+                     
+                     <li class="font_style3_1 li_numberStyle"><p>Automatic data migration from one user to another</p></li>
+                     <li class="font_style3_1 li_numberStyle"><p>Multi-tenancy (Multiple companies can be hosted by one installation)</p></li>
+                     <li class="font_style3_1 li_numberStyle"><p>Smartphone & Tablet client applications for Android and iOS</p></li>
+                     <li class="font_style3_1 li_numberStyle"><p>Scalability of all components</p></li>
+                     <li class="font_style3_1 li_numberStyle"><p>No dependence on third-party software requiring additional royalties</p></li>
+                    </ul>
+
+                    <br>
+                    <p id="product_overview" class="font_style3_2"> </p>
+                    <hr><br>
+                 
+                    <p class="font_style3_2"> </p>
+                    <p style=" font-family: 'Roboto', serif;font-size:36px;font-weight: 400;color :rgb(51,51,51);">Product-level Feature Overview</p>
+                    <br>
+
+                     <table>
+                        <tr>
+                            <td><img src="overview-product-level-feature-overview.png" style="max-width:100%"></td>
+                        </tr>
+                                    
+                    </table>
+                    <p  id="admin_feature"> </p>
+                    <br><br><br>
+
+                    <p class="font_style3_2"> Administrator features:</p>
+                    <ul>
+                    <li class="font_style3_1 li_numberStyle"> <p> Company management </p> </li>
+                    <ul>
+                       <li class="font_style3_1 li_disc"> <p> Company logo </p> </li>
+                       <li class="font_style3_1 li_disc"> <p> Company name </p> </li>
+                       <li class="font_style3_1 li_disc"> <p> Company domain </p> </li>
+                       <li class="font_style3_1 li_disc"> <p> LDAP/AD server setup </p> </li>
+                    </ul><br>
+
+                     <li class="font_style3_1 li_numberStyle"> <p> Company Security Policies </p> </li>
+                    <ul>
+                       <li class="font_style3_1 li_disc"> <p> Allow link sharing </p> </li>
+                       <li class="font_style3_1 li_disc"> <p> Allow new team members to be invited by sharing folders </p> </li>
+                        <li class="font_style3_1 li_disc"> <p> Allow users to create company folders </p> </li>
+                        <li class="font_style3_1 li_disc"> <p> Allow limiting storage capacity by folders </p> </li>
+                        <li class="font_style3_1 li_disc"> <p> Automatic logout timers </p> </li>
+                        <li class="font_style3_1 li_disc"> <p> Enforce password change within a specified period of time </p> </li>
+                        <li class="font_style3_1 li_disc"> <p> Allow using of previous passwords </p> </li>
+                       <li class="font_style3_1 li_disc"> <p> Allow use mobile application </p> </li>
+                       <li class="font_style3_1 li_disc"> <p> Require terms of use approval on first login/on each login </p> </li>
+                       <li class="font_style3_1 li_disc"> <p> Set/Change a main admin/sub-admin </p> </li>
+                    </ul><br>
+
+                     <li class="font_style3_1 li_numberStyle"> <p> Team Management </p> </li>
+                    <ul>
+                        <li class="font_style3_1 li_disc"> <p> Add a team member manually/via invites </p> </li>
+                        <li class="font_style3_1 li_disc"> <p> Edit/Delete </p> </li>
+                        <li class="font_style3_1 li_disc"> <p> Block/Unblock </p> </li>
+                        <li class="font_style3_1 li_disc"> <p> Password reset/change</p> </li>
+                        <li class="font_style3_1 li_disc"> <p> Set team member permissions for: </p> </li>
+                            <ul>
+                           <li class="font_style3_1 li_circle"><p> Print </p</li>
+                          <li class="font_style3_1 li_circle"><p> Download</p</li>
+                          <li class="font_style3_1 li_circle"><p> Allow PC client</p</li>
+                          <li class="font_style3_1 li_circle"><p> User mobile Web/App</p</li>
+                          <li class="font_style3_1 li_circle"><p> Use Watermark</p</li>
+                          <li class="font_style3_1 li_circle"><p> Ip restruction</p</li>
+                            </ul>
+
+                       <li class="font_style3_1 li_disc"> <p> Set Quota Size, GB </p> </li>
+                       <li class="font_style3_1 li_disc"> <p> Password reset/change </p> </li>
+                        <li class="font_style3_1 li_disc"> <p> Filter by name, e-mail, status </p> </li>
+                        <li class="font_style3_1 li_disc"> <p> Team member activity log </p> </li>
+                     </ul><br>
+
+                     <li class="font_style3_1 li_numberStyle"> <p> Group Management </p> </li>
+                    <ul>
+                        <li class="font_style3_1 li_disc"> <p> Create/Rename/Delete a group </p> </li>
+                       <li class="font_style3_1 li_disc"> <p> Set group permissions for </p> </li>
+                       <ul>
+                          <li class="font_style3_1 li_circle"><p> Print </p</li>
+                          <li class="font_style3_1 li_circle"><p> Download</p</li>
+                          <li class="font_style3_1 li_circle"><p> Allow PC client</p</li>
+                         <li class="font_style3_1 li_circle"><p> User mobile Web/App</p</li>
+                         <li class="font_style3_1 li_circle"><p> Use Watermark</p</li>
+                          <li class="font_style3_1 li_circle"><p> Ip restriction</p</li>
+                       </ul>
+                    </ul><br>
+
+                      <li class="font_style3_1 li_numberStyle"> <p> Company folders management & audit </p> </li>
+                    <ul>
+                       <li class="font_style3_1 li_disc"> <p> Create/Remove company folder </p> </li>
+                       <li class="font_style3_1 li_disc"> <p> Grant/Revoke company folder access </p> </li>
+                       <li class="font_style3_1 li_disc"> <p> Allow users to create and manage company folders </p> </li>
+                       <li class="font_style3_1 li_disc"> <p> Monitor activity </p> </li>
+                    </ul> <br>
+
+                     <li class="font_style3_1 li_numberStyle"> <p> Shared folders and files management </p> </li>
+                     <ul>
+                       <li class="font_style3_1 li_disc"> <p> List of shared files & folders by user </p> </li>
+                       <li class="font_style3_1 li_disc"> <p> Deny access to shared resources </p> </li>
+                       <li class="font_style3_1 li_disc"> <p> List of collaborators and perimeter types </p> </li>
+                       <li class="font_style3_1 li_disc"> <p> List of shared resources owners </p> </li>
+                    </ul><br>
+
+                     <li class="font_style3_1 li_numberStyle"> <p> Company audit log  </p> </li>
+                        <ul>
+                           <li class="font_style3_1 li_disc"> <p> Filter by user </p> </li>
+                           <li id="user_feature" class="font_style3_1 li_disc"> <p> Filter by file/folder name </p> </li>
+                           <li class="font_style3_1 li_disc"> <p> Filter by event type </p> </li>
+                        </ul>
+                   
+                      </ul>
+                
+                        <br>
+               
+                       <p class="font_style3_2">End-user features:<p>
+                        <ul>
+                         <li class="font_style3_1 li_numberStyle"> <p> File browsing, metadata access </p> </li>
+            
+                         <li class="font_style3_1 li_numberStyle"> <p> File upload, download </p> </li>
+            
+                         <li class="font_style3_1 li_numberStyle"> <p> Real-time 2-way file sync (Cloudike RapidSync™) </p> </li>
+                        <ul>
+                            <li class="font_style3_1 li_disc"> <p> Instant sync from Device to Cloud </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> Instant sync from Cloud to Device </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> Automatic sync conflict detection and resolution </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> Binary diff support, sync only file change not the whole file </p> </li>
+                           </ul><br>
+
+                         <li class="font_style3_1 li_numberStyle"> <p> Share folder and multi-user collaboration </p> </li>
+                         <ul>
+                            <li class="font_style3_1 li_disc"> <p> Multiple users can share the same folder </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> Company shared folders, with easy to use access request/approve flow. </p> </li>                  
+                         </ul><br>
+
+                         <li class="font_style3_1 li_numberStyle"> <p> File versioning & undelete </p> </li>
+                         <ul>
+                            <li class="font_style3_1 li_disc"> <p> Each file maintains a history of past versions </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> Deleted files can be recovered </p> </li>
+                         </ul><br>
+
+                         <li class="font_style3_1 li_numberStyle"> <p> Events log </p> </li>
+                        <ul>
+                           <li class="font_style3_1 li_disc"> <p> User can see the history of actions performed in his/her storage, 
+                           including actions performed by collaborators in shared folder </p> </li>
+                        </ul><br>
+
+                         <li class="font_style3_1 li_numberStyle"> <p> Create public link to file or folder  </p> </li>
+                        <ul>
+                           <li class="font_style3_1 li_disc"> <p> Guessing-protected short link </p> </li>
+                        </ul><br>
+
+                         <li class="font_style3_1 li_numberStyle"> <p> Thumbnails - multi-resolution, photo and video files, documents </p> </li>
+    
+                         <li class="font_style3_1 li_numberStyle"> <p> Previews - multi-resolution, photo and video files, documents  </p> </li>
+                         <ul>
+                            <li class="font_style3_1 li_disc"> <p> png, jpg, gif, mp4, avi, mkv etc. </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> xls, doc, ppt, xlsx, docx, pptx </p> </li>
+                         </ul><br>
+
+                         <li class="font_style3_1 li_numberStyle"> <p> Streaming of audio and video content  </p> </li>
+    
+                         <li class="font_style3_1 li_numberStyle"> <p> Device management  </p> </li>
+                         <ul>
+                            <li class="font_style3_1 li_disc"> <p> List of attached devices </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> Remote device logout </p> </li>
+                         </ul><br>
+
+                       <li class="font_style3_1 li_numberStyle"> <p> Manually set bandwidths  </p> </li>
+    
+                     <li id="security1" class="font_style3_1 li_numberStyle"> <p> Offline access (favorites)  </p> </li>
+
+                     <li class="font_style3_1 li_numberStyle"> <p> Access to file versions </p> </li>
+         
+                      </ul><br>
+
+                       <p class="font_style3_2">Security : </p>
+                         <ul>
+                         <li class="font_style3_1 li_numberStyle"> <p> Authentication via OAuth 2.0 or internal email-based </p> </li>
+                         <li class="font_style3_1 li_numberStyle"> <p> Active Directory/LDAP Authentication </p> </li>
+                         <li class="font_style3_1 li_numberStyle"> <p> Bulk CSV users import </p> </li>
+                         <li class="font_style3_1 li_numberStyle"> <p> Sharing perimeter policies </p> </li>
+                         <li class="font_style3_1 li_numberStyle"> <p> Fully encrypted HTTPs APIs </p> </li>
+                         <li class="font_style3_1 li_numberStyle"> <p> Support for Mounted Encoded Folders </p> </li>
+                         <li class="font_style3_1 li_numberStyle"> <p> Industry-standard AES-128 encryption </p> </li>
+                      </ul><br>
+
+                          <p class="font_style3_2">Platform Admin : </p>
+                       <ul>
+                          <li class="font_style3_1 li_numberStyle"> <p> Product usage statistics </p> </li>
+                          <ul>
+                             <li class="font_style3_1 li_disc"> <p> aggregate statistics <p> </li>
+                           <li class="font_style3_1 li_disc"> <p> per-user statistics <p> </li>
+                           <li class="font_style3_1 li_disc"> <p> per-device breakouts <p> </li>
+                        </ul>
+                         <li class="font_style3_1 li_numberStyle"> <p> User and quota management </p> </li>
+                      </ul><br>
+
+
+                       <p class="font_style3_2">Monitoring : </p>
+                      <ul>
+                            <li class="font_style3_1 li_numberStyle"> <p> Per-module monitoring, alerting to email or SMS </p> </li>
+                      </ul>
+                    </ul>   
+                    <p id="pc_client"> </p>
+                    <br><hr><br>
+
+                    <p style=" font-family: 'Roboto', serif;font-size:36px;font-weight: 400;color :rgb(51,51,51);margin-bottom:0;">PC Client features</p> 
+                    <p style=" font-family: 'Roboto', serif;font-size:20px;font-weight: 400;color :#999999;;">Windows and MacOSX </p> 
+                    <br>
+                    <table>
+                        <tr>
+                            <td><img src="overview-pc-client-feature-windows-and-macosx.png" style="max-width:100%"></td>
+                        </tr>
+                 
+                        <tr>
+                            <td class="font_style3_1" style="text-align:center;color:#999999"><p> Compatibility : Windows XP+, MaxOSX 10.6+ </p></td>
+                        </tr>
+                    </table>
+
+                    <br>
+
+                    <p class="font_style3_2"> Features : </p> 
+                   <ul>
+                      <li class="font_style3_1 li_numberStyle"> <p> Create local folder synchronized with the cloud <p> </li>
+                         <ul>
+                            <li class="font_style3_1 li_disc"> <p> Real-time 2-way file sync (RapidSync™) </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> Instant reaction to local file updates and server file updates </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> Sync conflict detection and automatic resolution </p> </li>
+                         </ul><br>
+
+                      <li class="font_style3_1 li_numberStyle"> <p> Single-click Web integration <p> </li>
+                            <ul>
+                            <li class="font_style3_1 li_disc"> <p> User can open cloud in web interface from system tray menu (automatic authorization)</p> </li>
+                         </ul><br>
+
+                        <li class="font_style3_1 li_numberStyle"> <p> System tray icon and menu <p> </li>
+                            <ul>
+                            <li class="font_style3_1 li_disc"> <p> Indication of Cloudike sync status in sync tray</p> </li>
+                                    <ul>
+                                        <li class="font_style3_1 li_circle"> <p> Not connected </p> </li>
+                                        <li class="font_style3_1 li_circle"> <p> Paused</p> </li>
+                                        <li class="font_style3_1 li_circle"> <p> Sync in progress</p> </li>
+                                        <li class="font_style3_1 li_circle"> <p> Synced </p> </li>
+                                        <li class="font_style3_1 li_circle"> <p> Sync error </p> </li>
+                                    </ul>
+
+                                <li class="font_style3_1 li_disc"> <p> Operation available from system tray </p> </li>
+                                    <ul>
+                                        <li class="font_style3_1 li_circle"> <p> Open sync folder </p> </li>
+                                        <li class="font_style3_1 li_circle"> <p> Open Web site</p> </li>
+                                        <li class="font_style3_1 li_circle"> <p> Pause application </p> </li>
+                                        <li class="font_style3_1 li_circle"> <p> View recent files </p> </li>
+                                        <li class="font_style3_1 li_circle"> <p> View storage used, Mb </p> </li>
+                                        <li class="font_style3_1 li_circle"> <p> Edit Setting </p> </li>
+                                        <li class="font_style3_1 li_circle"> <p> Report a problem </p> </li>
+                                        <li class="font_style3_1 li_circle"> <p> Logout </p> </li>
+                                        <li class="font_style3_1 li_circle"> <p> Quit </p> </li>
+                                    </ul>
+                         </ul><br>
+                    
+                        <li class="font_style3_1 li_numberStyle"> <p> Automatic network status monitoring <p> </li>
+                            <ul>
+                            <li class="font_style3_1 li_disc"> <p> Report connectivity status to user </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> Automatic recovery when network reappears </p> </li>
+                            </ul><br>
+
+                        <li class="font_style3_1 li_numberStyle"> <p> Deep integration with Explorer and Finder <p> </li>
+                            <ul>
+                            <li class="font_style3_1 li_disc"> <p> Context menu </p> </li>
+                                    <ul>
+                                        <li class="font_style3_1 li_circle"> <p> generate a public link (read-only) </p> </li>
+                                        <li class="font_style3_1 li_circle"> <p> open file in Web interface - deep integration with Web </p> </li>
+                                    </ul>
+
+                                <li class="font_style3_1 li_disc"> <p> Sync status indication on files and folders </p> </li>
+                                    <ul>
+                                        <li class="font_style3_1 li_circle"> <p> each file and folder has icon that shows current sync status: synced, not synced, in process </p> </li>
+                                    </ul>
+                         </ul><br>
+                    
+                        <li class="font_style3_1 li_numberStyle"> <p> Notifications <p> </li>
+                            <ul>
+                            <li class="font_style3_1 li_disc"> <p> Notify user when sync finishes with pop-up window</p> </li>
+                         </ul><br>
+
+                        <li class="font_style3_1 li_numberStyle"> <p> Autostart <p> </li>
+                            <ul>
+                            <li class="font_style3_1 li_disc"> <p> Enable autostart of Cloudike on your PC </p> </li>
+                         </ul><br>
+
+                        <li class="font_style3_1 li_numberStyle"> <p> Sync speed limit <p> </li>
+                            <ul>
+                            <li class="font_style3_1 li_disc"> <p> Enable sync speed limit (Kbps) </p> </li>
+                         </ul><br>
+
+                        <li class="font_style3_1 li_numberStyle"> <p> Screenshots upload & sharing <p> </li>
+                            <ul>
+                            <li class="font_style3_1 li_disc"> <p> Enable screenshots upload & sharing </p> </li>
+                         </ul><br>
+
+                        <li class="font_style3_1 li_numberStyle"> <p> Files are deleted to a trash bin <p> </li>
+                    
+                        <li class="font_style3_1 li_numberStyle"> <p> Selective Synchronization <p> </li>
+                            <ul>
+                            <li class="font_style3_1 li_disc"> <p> Select an account folder to sync with Cloudike desktop App </p> </li>
+                            </ul><br>
+
+                        <li class="font_style3_1 li_numberStyle"> <p> Supprot for HTTP proxy <p> </li>
+                    
+                        <li class="font_style3_1 li_numberStyle"> <p> Mounted Encoded Folders Support <p> </li>
+                            <ul>
+                            <li class="font_style3_1 li_disc"> <p> Create and mount a folder </p> </li>
+                                <li  class="font_style3_1 li_disc"> <p> Set password </p> </li>
+                         </ul><br>
+                   </ul>
+
+                    <p id="app_client"> </p>
+                    <br><hr><br>
+                
+
+                    <p  style=" font-family: 'Roboto', serif;font-size:36px;font-weight: 400;color :rgb(51,51,51);margin-bottom:0;"> Mobile / Tablet Features </p> 
+                    <p  style=" font-family: 'Roboto', serif;font-size:20px;font-weight: 400;color :#999999;margin-top:0;"> iPhone and Android </p> 
+                    <br>
+
+                    <table>
+                        <tr>
+                            <td><img src="overview-mobile-tablet-feature-iphone-and-andriod.png" style="max-width:100%"></td>
+                        </tr>
+                 
+                        <tr>
+                            <td class="font_style3_1" style="text-align:center;color:#999999"><p> Compatibility : iOS 4++, Android 2.3+ </p></td>
+                        </tr>
+                    </table>
+
+                    <br>
+
+                    <p class="font_style3_2"> Features : </p> 
+                   <ul>
+                      <li class="font_style3_1 li_numberStyle"> <p> Browse cloud storage <p> </li>
+                     <ul>
+                        <li class="font_style3_1 li_disc"> <p> File list with thumbnails </p> </li>
+                        <li class="font_style3_1 li_disc"> <p> Sorting modes : by name, by creation time, by modification time </p> </li>
+                        <li class="font_style3_1 li_disc"> <p> Smart metadata caching for superior user experience </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> One-Click Refresh </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> New folder creation </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> Using File Search bar </p> </li>
+                     </ul><br>
+
+                  <li class="font_style3_1 li_numberStyle"> <p> Perform standard file operations <p> </li>
+                        <ul>
+                        <li class="font_style3_1 li_disc"> <p> Delete, Rename, Move </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> Export, Save on SD card (Android only) </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> Save in library, Copy Print (iOS only) </p> </li>
+                     </ul><br>
+
+                    <li class="font_style3_1 li_numberStyle"> <p> Share file or folder to social networks <p> </li>
+                        <ul>
+                        <li class="font_style3_1 li_disc"> <p> via external apps (Android only) </p> </li>  
+                     </ul><br>
+                    
+                    <li class="font_style3_1 li_numberStyle"> <p> Open file in external application <p> </li>
+                        
+                    <li class="font_style3_1 li_numberStyle"> <p> Upload file to internal memory (Android only) <p> </li>
+                        
+                    <li class="font_style3_1 li_numberStyle"> <p> Download file <p> </li>
+                        <ul>
+                        <li class="font_style3_1 li_disc"> <p> From internal memory or media roll </p> </li>
+                        </ul><br>
+                    <li class="font_style3_1 li_numberStyle"> <p> Offline access (iOS), Favorites (Android) <p> </li>
+                        <ul>
+                        <li class="font_style3_1 li_disc"> <p> File and folder tree viewable when offline </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> Files marked as "Favorite" (Android) and Offline (iOS) are available for viewing offline </p> </li>
+                     </ul><br>
+                    <li class="font_style3_1 li_numberStyle"> <p> Edit and save to the Cloud <p> </li>
+                        <ul>
+                        <li class="font_style3_1 li_disc"> <p> When files from the Cloud are edited in external application, 
+                            <br> changes saved back to the Cloud automatically (Android only) </p> </li>
+                     </ul><br>
+                    <li class="font_style3_1 li_numberStyle"> <p> Single and bulk uploda of files, photoes and videos <p> </li>
+                        <ul>
+                        <li class="font_style3_1 li_disc"> <p> File extensions :  </p> </li>
+                                <ul>
+                                <li class="font_style3_1 li_circle"> <p> png, jpg, gif, mp4, avi, mkv, etc. </p> </li>
+                                    <li class="font_style3_1 li_circle"> <p> xls, doc, ppt, xlxs, docx, pptx </p> </li>
+                             </ul>
+                            <li class="font_style3_1 li_disc"> <p> Upload via Wifi-only or via 3G + Wifi (iOS)  </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> Pause when battery charge is low </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> User can specify a sync folder location (PC client) </p> </li>
+                     </ul><br>
+
+                    <li class="font_style3_1 li_numberStyle"> <p> Photo and video roll view <p> </li>
+                        <ul>
+                        <li class="font_style3_1 li_disc"> <p> Tile-based view for photos and videos sorted based on data of creation </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> Smart thumbnail and preview caching for fast browsing </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> Adaptive thumbnail resolution based on screen density </p> </li>
+                     </ul><br>
+                    
+                    <li class="font_style3_1 li_numberStyle"> <p> Gallery view <p> </li>
+                        <ul>
+                        <li class="font_style3_1 li_disc"> <p> Pre-view photo and video files in full screen </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> Navigate easily via gestures </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> Conveniently invoke file operations via full screen </p> </li>
+                     </ul><br>
+
+                    <li class="font_style3_1 li_numberStyle"> <p> Account Management <p> </li>
+                        <ul>
+                        <li class="font_style3_1 li_disc"> <p> View name </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> View memory storage used </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> Unlink the device from Cloudike (Android only) </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> Upload rules (iOS only) </p> </li>
+                                 <ul>
+                                <li class="font_style3_1 li_circle"> <p> Wifi only</p> </li>
+                                    <li class="font_style3_1 li_circle"> <p> Wifi + mobile internet </p> </li>
+                             </ul>
+                            <li class="font_style3_1 li_disc"> <p> Clear cache (Android Only) </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> View App version </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> View Cache size (Android Only) </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> Send feedback </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> View Legal & privacy (Android Only) </p> </li>
+                            <li class="font_style3_1 li_disc"> <p> Logout (iOS) </p> </li>
+                     </ul>
+                    
+                        
+               </ul>
+                <p id="web"></p>
+                
+                <br><hr><br>
+                <p id="dashboard" style="font-family : 'Roboto', serif; font-size:36px; font-weight:400; color:rgb(51,51,51);">Web Interface Features </p>
+                <br>
+                <p class="font_style3_2"> Dashboard & files </p>
+                <br>
+
+                <table>
+                    <tr>
+                        <td><img src="overview--web-interface-feature-dashboard&files.png" style="max-width:100%"></td>
+                    </tr>
+                 
+                    <tr>
+                        <td class="font_style3_1" style="text-align:center;color:#999999"><p> Compatibility IE8+, Chrome, Firefox, Opera, Safari, Mobile (generic HTML5) </p></td>
+                    </tr>
+                </table>
+
+                
+                <br>
+
+                
+                <p class="font_style3_2"> Features:</p>
+                <ul>
+                    <li class="font_style3_1 li_numberStyle"><p> Home Page</p></li>
+                    <ul>
+                        <li class="font_style3_1 li_disc"><p> View User Information (Storage, Traffic, Cloudike news)</p></li>
+                        <li class="font_style3_1 li_disc"><p> View recent notifications </p></li>
+                        <li class="font_style3_1 li_disc"><p> View favorites </p></li>
+                    </ul><br>
+
+                    <li class="font_style_3_1 li_numberStyle"><p> Browse file tree</p></li>
+                    <ul>
+                        <li class="font_style3_1 li_disc"><p> Tile and list modes with thumbnails</p></li>
+                        <li class="font_style3_1 li_disc"><p> Adjustable sorting criteria </p></li>
+                    </ul><br>
+
+                    <li class="font_style_3_1 li_numberStyle"><p> File upload/download</p></li>
+                    <ul>
+                        <li class="font_style3_1 li_disc"><p> Multiple file upload</p></li>
+                        <li class="font_style3_1 li_disc"><p> Directory tree upload </p></li>
+                        <li class="font_style3_1 li_disc"><p> Including drag-and-drop from PC</p></li>
+                        <li class="font_style3_1 li_disc"><p> File upload progress bar </p></li>
+                    </ul><br>
+
+                    <li class="font_style3_1 li_numberStyle"><p> Perform standard file operations</p></li>
+                    <ul>
+                        <li class="font_style3_1 li_disc"><p> Delete, Rename, Move, Copy</p></li>
+                    </ul><br>
+
+                    <li class="font_style3_1 li_numberStyle"><p> Folder sharing and collaboration</p></li>
+                    <ul>
+                        <li class="font_style3_1 li_disc"><p> Invite team members or a group to share folder with and collaborate jointly on files (read and write, read only)</p></li>
+                        <li class="font_style3_1 li_disc"><p> Create company shared folders</p></li>
+                    </ul><br>
+
+                    
+                    <table>
+                    <tr>
+                        <td><img src="overview--web-interface-feature-dashboard&files-share-file-or-folder....png" style="max-width:100%"></td>
+                    </tr>
+                
+                     </table>
+                    
+                    <br>
+                    <li class="font_style3_1 li_numberStyle"><p> Share file or folder with team members and to social networks</p></li>
+                    <ul>
+                        <li class="font_style3_1 li_disc"><p> Create and share public link to files and folders</p></li>
+                    </ul><br>
+
+                    <li class="font_style3_1 li_numberStyle"><p> Allow users to set the following sharing options:</p></li>
+                    <ul>
+                        <li class="font_style3_1 li_disc"><p> Expiration date</p></li>
+                        <li class="font_style3_1 li_disc"><p> Password</p></li>
+                        <li class="font_style3_1 li_disc"><p> Downloads limit (maximum number of downloads)</p></li>
+                        <li class="font_style3_1 li_disc"><p> Download only link (for folders)</p></li>
+                        <li class="font_style3_1 li_disc"><p> Upload only link (for folders)</p></li>
+                    </ul><br>
+
+                    <li class="font_style3_1 li_numberStyle"><p> Preview photos, videos, documents in full screen</p></li>
+                    <li class="font_style3_1 li_numberStyle"><p> Leave a comment to a file</p></li>
+                    <li class="font_style3_1 li_numberStyle"><p> View file details</p></li>
+                    <li class="font_style3_1 li_numberStyle"><p> View file versions history</p></li>
+                    <ul>
+                        <li class="font_style3_1 li_disc"><p> Preview previous versions or download</p></li>
+                        <li class="font_style3_1 li_disc"><p> Restore to a desired version</p></li>
+                    </ul><br>
+
+                    <li class="font_style3_1 li_numberStyle"><p> Download applications (Windows, Mac, Android, iOS)</p></li>
+                    <ul>
+                        <li class="font_style3_1 li_disc"><p> Auto-detection of user device</p></li>
+                    </ul><br>
+
+                    <li class="font_style3_1 li_numberStyle"><p> Favorites </p></li>
+                    <ul>
+                        <li class="font_style3_1 li_disc"><p> Add/Remove a File or Folder to/from Your Favorites List</p></li>
+                        <li class="font_style3_1 li_disc"><p> Filter by Size</p></li>
+                        <li class="font_style3_1 li_disc"><p> Filter by Date Modified</p></li>
+                    </ul><br>
+
+                    <li class="font_style3_1 li_numberStyle"><p> Trash </p></li>
+                    <ul>
+                        <li class="font_style3_1 li_disc"><p > Remove selected items from trash</p></li>
+                        <li class="font_style3_1 li_disc"><p id="management"> Restore/Empty trash</p></li><br>
+                    </ul>
+                </ul>
+
+                <br>
+
+
+         
+                <p class="font_style3_2"> Management & log</p>
+                <br>
+                <ul>
+                    <li class="font_style3_1 li_numberStyle"><p> Device management</p></li>
+                    <ul>
+                        <li class="font_style3_1 li_disc"><p> List of attached devices</p></li>
+                        <li class="font_style3_1 li_disc"><p> Remote device logout</p></li>
+                    </ul><br>
+
+                    <li class="font_style3_1 li_numberStyle"><p> Company management</p></li>
+                    <ul>
+                        <li class="font_style3_1 li_disc"><p> Company logo</p></li>
+                        <li class="font_style3_1 li_disc"><p> Company name</p></li>
+                        <li class="font_style3_1 li_disc"><p> Company domain</p></li>
+                        <li class="font_style3_1 li_disc"><p> LDAP/AD server setup</p></li>
+                    </ul><br>
+
+                    <li class="font_style3_1 li_numberStyle"><p> Company Security Policies</p></li>
+                    <ul>
+                        <li class="font_style3_1 li_disc"><p> Allow link sharing</p></li>
+                        <li class="font_style3_1 li_disc"><p> Allow new team members to be invited by sharing folders</p></li>
+                        <li class="font_style3_1 li_disc"><p> Allow users to create company folders</p></li>
+                        <li class="font_style3_1 li_disc"><p> Allow limiting storage capacity by folders</p></li>
+                        <li class="font_style3_1 li_disc"><p> Automatic logout timers</p></li>
+                        <li class="font_style3_1 li_disc"><p> Enforce password change within a specified period of time</p></li>
+                        <li class="font_style3_1 li_disc"><p> Allow using of previous passwords</p></li>
+                        <li class="font_style3_1 li_disc"><p> Allow use mobile application</p></li>
+                        <li class="font_style3_1 li_disc"><p> Require terms of use approval on first login/on each login</p></li>
+                        <li class="font_style3_1 li_disc"><p> Set/Change a main admin/sub-admin</p></li>
+                    </ul><br>
+         
+                    <li class="font_style3_1 li_numberStyle"><p> Account management</p></li>
+                    <ul>
+                        <li class="font_style3_1 li_disc"><p> Change name/e-mail/language</p></li>
+                        <li class="font_style3_1 li_disc"><p> Enable/Disable notifications</p></li>
+                        <li class="font_style3_1 li_disc"><p> Password reset/change</p></li>
+                        <li class="font_style3_1 li_disc"><p> Add additional sign-in email</p></li>
+                        <li class="font_style3_1 li_disc"><p> View device list </p></li>
+                        <li class="font_style3_1 li_disc"><p> Enable/Disable WebDAV access</p></li>
+                        <li class="font_style3_1 li_disc"><p> Unsubscribe from service, stating the reason:</p></li>
+                        <ul>
+                            <li class="font_style3_1 li_circle"><p> Price </p></li>
+                            <li class="font_style3_1 li_circle"><p> Use of other services </p></li>
+                             <li class="font_style3_1 li_circle"><p> Inconvenient to use the service </p></li>
+                            <li class="font_style3_1 li_circle"><p> Others </p></li>
+                            <li class="font_style3_1 li_circle"><p> Not using </p></li>
+                            <li class="font_style3_1 li_circle"><p> Out of business </p></li>
+                        </ul>
+                    </ul><br>
+
+                    <li class="font_style3_1 li_numberStyle"><p> Activity log</p></li>
+                    <ul>
+                        <li class="font_style3_1 li_disc"><p> User activity log filtered by the following events: </p></li>
+                        <ul>
+                            <li class="font_style3_1 li_circle"><p> Any event </p></li>
+                            <li class="font_style3_1 li_circle"><p> Added Folder </p></li>
+                            <li class="font_style3_1 li_circle"><p> Edited Folder </p></li>
+                            <li class="font_style3_1 li_circle"><p> Moved Folder </p></li>
+                            <li class="font_style3_1 li_circle"><p> Deleted Folder </p></li>
+                            <li class="font_style3_1 li_circle"><p> Restored Folder </p></li>
+                            <li class="font_style3_1 li_circle"><p> Added File </p></li>
+                            <li class="font_style3_1 li_circle"><p> Edited File </p></li>
+                            <li class="font_style3_1 li_circle"><p> Moved File </p></li>
+                            <li class="font_style3_1 li_circle"><p> Deleted File </p></li>
+                            <li class="font_style3_1 li_circle"><p> Restored File </p></li>
+                            <li class="font_style3_1 li_circle"><p> Created public link </p></li>
+                            <li class="font_style3_1 li_circle"><p> Removed public link </p></li>
+                            <li class="font_style3_1 li_circle"><p> Cleared trash bin </p></li>
+                        </ul><br>
+
+                        <li class="font_style3_1 li_disc"><p> Team member activity log </p></li>
+                        <ul>
+                            <li class="font_style3_1 li_circle"><p> Filter by name </p></li>
+                        </ul><br>
+                    </ul>
+
+                    <li class="font_style3_1 li_numberStyle"><p> Team Management </p></li>
+                    <ul>
+                        <li class="font_style3_1 li_disc"><p> Add a team member manually/via invites</p></li>
+                        <li class="font_style3_1 li_disc"><p> Edit/Delete a team member</p></li>
+                        <li class="font_style3_1 li_disc"><p> Block/Unblock</p></li>
+                        <li class="font_style3_1 li_disc"><p> Password reset/change</p></li>
+                        <li class="font_style3_1 li_disc"><p> Set permissions for:</p></li>
+                        <ul>
+                            <li class="font_style3_1 li_circle"><p> Print </p></li>
+                            <li class="font_style3_1 li_circle"><p> Download </p></li>
+                            <li class="font_style3_1 li_circle"><p> Allow PC client </p></li>
+                            <li class="font_style3_1 li_circle"><p> Use mobile Web/App </p></li>
+                            <li class="font_style3_1 li_circle"><p> Use Watermark </p></li>
+                            <li class="font_style3_1 li_circle"><p> IP restriction </p></li>
+                        </ul>
+                        <li class="font_style3_1 li_disc"><p> Set Quota Size, GB</p></li>
+                        <li class="font_style3_1 li_disc"><p> Password reset/change</p></li>
+                        <li class="font_style3_1 li_disc"><p> Filter by name, e-mail, status</p></li>
+                        <li class="font_style3_1 li_disc"><p> Team member activity log</p></li>
+                    </ul><br>
+
+                    <li class="font_style3_1 li_numberStyle"><p> Group Management </p></li>
+                    <ul>
+                        <li class="font_style3_1 li_disc"><p> Create/Rename/Delete a group</p></li>
+                        <li class="font_style3_1 li_disc"><p> Set group permissions for:</p></li>
+                        <ul>
+                            <li class="font_style3_1 li_circle"><p> Print </p></li>
+                            <li class="font_style3_1 li_circle"><p> Download </p></li>
+                            <li class="font_style3_1 li_circle"><p> Allow PC client </p></li>
+                            <li class="font_style3_1 li_circle"><p> Use mobile Web/App </p></li>
+                            <li class="font_style3_1 li_circle"><p> Use Watermark </p></li>
+                            <li class="font_style3_1 li_circle"><p> IP restriction </p></li>
+                        </ul>
+                    </ul><br>
+
+                    <li class="font_style3_1 li_numberStyle"><p> Company folders management & audit </p></li>
+                    <ul>
+                        <li class="font_style3_1 li_disc"><p> Create/Remove company folder</p></li>
+                        <li class="font_style3_1 li_disc"><p> Grant/Revoke company folder access</p></li>
+                        <li class="font_style3_1 li_disc"><p> Allow users to create and manage company folders</p></li>
+                        <li class="font_style3_1 li_disc"><p> Monitor activity</p></li>
+                    </ul><br>
+
+                    <li class="font_style3_1 li_numberStyle"><p> Shared folders and files management </p></li>
+                    <ul>
+                        <li class="font_style3_1 li_disc"><p> List of shared files & folders by users</p></li>
+                        <li class="font_style3_1 li_disc"><p> Deny access to shared resources</p></li>
+                        <li class="font_style3_1 li_disc"><p> List of collaborators and perimeter types</p></li>
+                        <li class="font_style3_1 li_disc"><p> List of shared resources owners</p></li>
+                    </ul><br>
+
+                    <li class="font_style3_1 li_numberStyle"><p> Company audit log </p></li>
+                    <ul>
+                        <li class="font_style3_1 li_disc"><p> Filter by user</p></li>
+                        <li class="font_style3_1 li_disc"><p> Filter by File/Folder name</p></li>
+                        <li class="font_style3_1 li_disc"><p> Filter by event type</p></li>
+                    </ul><br>
+
+                </ul>
+             
+         
+                <p id="security2"></p>
+                <br><hr><br>
+         
+                <p id="security_reliability" style="font-family : 'Roboto', serif; font-size:36px; font-weight:400; color:rgb(51,51,51);"> Security & Reliability Features</p>
+                <br>
+
+                <table>
+                    <tr>
+                        <td><img src="overview-security&reliability-feature.png" style="max-width:100%"></td>
+                    </tr>
+                </table>
+
+                <br>
+                <p class="font_style3_1 li_disc"> Cloudike is designed with security in mind.</p>
+                <br>
+
+                <p class="font_style3_2"> Security: </p>
+                <ul>
+                    <li class="font_style3_1 li_numberStyle"><p> End-to-end communication encryption</p></li>
+                    <ul>
+                        <li class="font_style3_1 li_disc"><p> Industry-standard AES-128 encryption is used for all communication between server and client </p></li>
+                        <li class="font_style3_1 li_disc"><p> Full eavesdropping protection </p></li>
+                    </ul><br>
+            
+                    <li class="font_style3_1 li_numberStyle"><p> File upload / download encryption </p></li>
+                    <li class="font_style3_1 li_numberStyle"><p> No password storing on the device </p></li>
+                    <ul>
+                        <li class="font_style3_1 li_disc"><p> Industry-standard, encrypted OpenAuth protocol is used to login user without storing password on the device </p></li>
+                    </ul><br>
+
+                    <li class="font_style3_1 li_numberStyle"><p> Remote device disconnect & data wipe</p></li>
+                    <ul>
+                        <li class="font_style3_1 li_disc"><p> Lost device can be disconnected from storage using web interface </p></li>
+                        <li class="font_style3_1 li_disc"><p> All files can be deleted from the client device remotely </p></li>
+                    </ul><br>
+           
+                    <li class="font_style3_1 li_numberStyle"><p> Security policies and perimeter setup</p></li>
+                    <ul>   
+                        <li class="font_style3_1 li_disc"><p> Sharing activity can be limited to company scope </p></li>
+                        <li class="font_style3_1 li_disc"><p> All Shared files and folders are displayed in Company Administrator console</p></li>
+                        <li class="font_style3_1 li_disc"><p> Auto logout policies </p></li>
+                        <li class="font_style3_1 li_disc"><p> Password-expiration policy</p> </li>
+                        <li class="font_style3_1 li_disc"><p> Company-wide audit log with convenient filtering </p></li>
+                    </ul>
+                </ul>
+         
+                <br><br>
+
+                <p class="font_style3_2"> Reliability:</p>
+                <ul>
+                    <li class="font_style3_1 li_numberStyle"><p> Servers are duplicated for providing continuous service</p></li>
+                    <li class="font_style3_1 li_numberStyle"><p> Each user file is stored in a disaster-proof way: several copies, in two or more locations</p></li>
+                    <li class="font_style3_1 li_numberStyle"><p> Availability 99.9%, Durability 99.999999999%</p></li>
+                    <ul>
+                        <li class="font_style3_1 li_disc"><p> ~1 million times safer than laptop hard-drive</p></li>
+                        <li class="font_style3_1 li_disc"><p> ~10000 times safer than network-attached storage with replicated hard-drives</p></li>
+                    </ul>
+         
+                </ul>
+         
+
+                <p id="api_summary"></p>
+                <br><hr><br>
+
+                <p class="font_style3_2" style ="font-family : 'Roboto', serif; font-size:36px; font-weight:400; color:rgb(51,51,51);"> API Summary </p>
+                <br>
+
+                <table>
+                    <tr>
+                        <td><img src="overview-ApPI-summary.png" style="max-width:100%"></td>
+                    </tr>
+                </table>
+
+                <br>
+
+
+                <p class="font_style3_1 li_disc"> Cloudike client software is built on top of REST API layer. API methods can be divided into 10 functional groups:</p>
+                <br>
+
+                <ul>
+                    <li class="font_style3_1 li_disc"><p> User Account Management Methods - User creation and management, basic & OAuth authorization, invitation management, tokens generation and so on</p></li>
+                    <li class="font_style3_1 li_disc"><p> Basic Files and Folders methods - basic files and folders operations</p></li>
+                    <li class="font_style3_1 li_disc"><p> Advanced Files, Folders and Metadata management methods - get, create, restore, diff handling, versioning, etc.</p></li>
+                    <li class="font_style3_1 li_disc"><p> Extradata methods - methods for work with thumbnails, document preview etc.</p></li>
+                    <li class="font_style3_1 li_disc"><p> Shared folders or files and public links methods - Methods for public links generation, handling and management, shared folders creation and management</p></li>
+                    <li class="font_style3_1 li_disc"><p> Event & Notification methods - events and notifications for user</p></li>
+                    <li class="font_style3_1 li_disc"><p> Client application specific methods - version queries etc.</p></li>
+                    <li class="font_style3_1 li_disc"><p> User list management/Administrative tasks methods - accounts lookup, enable/disable etc.</p></li>
+                    <li class="font_style3_1 li_disc"><p> Analytics methods - Key metrics query methods</p></li>
+                    <li class="font_style3_1 li_disc"><p> Configuration KV-storage methods - Configuration R/W methods</p></li>
+                </ul>
+
+
+                <br><br><br><br><br><br><br><br><br><br><br><br>      
+                </div>
+            </div>
+        </div>
+    </div>
+                <!-- /#page-content-wrapper -->      
+</div>
+            <!-- /#wrapper -->
+    <!-- Menu Toggle Script -->
+<script>
+
+    $(".menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>
+</body>
+
+</html>
+  
