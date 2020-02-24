@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Lim jae sin, Ha Sung Hyeok">
+    <meta name="author" content="Lim Jae Sin, Ha Sung Hyeok">
 
     <link rel="icon" href="https://static.wixstatic.com/media/3396c4_b0f4a60d804944e38db02e54aa652426%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/3396c4_b0f4a60d804944e38db02e54aa652426%7Emv2.png" type="image/png"/>
     <title>Cloudike Business Product Overview</title>
@@ -16,9 +16,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
-    <!-- Custom CSS -->
-    <link href="sidebar.css" rel="stylesheet">
 
     <style type="text/css" > 
 
@@ -31,14 +28,14 @@
     }
 
     #wrapper.toggled {
-        padding-left: 250px;
+        padding-left: 340px;
     }
 
     #sidebar-wrapper {
         z-index: 1000;
         position: fixed;
         left: 250px;
-       width: 0;
+        width: 0;
         height: 100%;
         margin-left: -250px;
         overflow-y: auto;
@@ -121,7 +118,7 @@
     @media(min-width:768px) {
         #wrapper {
             padding-left: 420px;
-            padding-right: 100px;
+           
         }
 
         #wrapper.toggled {
@@ -166,6 +163,25 @@
 
     .font_style1 {
         color: #fff;
+        padding-top:15px;
+        font-size:1em%;
+        font-family: 'Roboto', serif;
+        font-weight: 400;
+
+        
+    }
+
+    media(max-width:480px){
+
+            #font_style1 {
+            color: #fff;
+            padding-top:15px;
+            font-size:2em%;
+            font-family: 'Roboto', serif;
+            font-weight: 400;
+            font-size:100%;
+            
+         }
     }
 
     .font_style2 {
@@ -211,7 +227,7 @@
 
 <body>
 
-    <nav class="navbar navbar-default navbar-fixed-top" style="overflow:hidden;">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid" style="background:#170B3B;">
        
 
@@ -222,10 +238,13 @@
                 <span class="icon-bar"></span>
             </button>
 
-            <img src="cloudike_logo.png" align="left" width="40px" height="50px" style="padding-top:15px;"> 
-            <p class="NOnavbar-brand font_style1" href="#" style="padding-top:15px;font-size:25px;font-family: 'Roboto', serif;font-weight: 400;" >&nbsp; Cloudike business overview </p>
+            <img src="cloudike_logo.png" align="left" width="40px" height="40px" style="margin-top:15px;margin-bottom:10px;"> 
+            <!--<p class="NOnavbar-brand font_style1" style="" >&nbsp; Cloudike business overview </p>-->
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <span class=" hidden-xs pull-left" aria-hidden="true">
+                    <p class="font_style1" style="font-size: 2.0em;" >&nbsp; Cloudike business overview </p>
+                </span>
             </div>
 
         </div>
@@ -238,6 +257,7 @@
 
             <ul class="sidebar-nav">
                 <br><br><br><br><br>
+   
                 <li>
                     <a href="#feature_overview" class="font_style2">Feature Overview </a>
                 </li>
@@ -252,16 +272,16 @@
                     <a href="#user_feature" class="font_style2_1" onMouseOver='this.innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| End-user features "' onMouseOut='this.innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End-user features"'>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End-user features</a>
                 </li>
                 <li>
-                    <a href="#security1" class="font_style2_1" onMouseOver='this.innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Security & Etc "' onMouseOut='this.innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Security & Etc"'>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Security & Etc</a>
+                    <a href="#security1" class="font_style2_1" onMouseOver='this.innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Security & Others "' onMouseOut='this.innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Security & Others"'>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Security & Others </a>
                 </li>
                 <li>
-                    <a href="#pc_client"  class="font_style2">PC Client features</a>
+                    <a href="#pc_client"  class="font_style2">PC client features</a>
                 </li>
                 <li>
                     <a href="#app_client" class="font_style2">Mobile / Tablet features</a>
                 </li>
                 <li>
-                    <a href="#web" class="font_style2">Web interface features</a>
+                    <a href="#web" class="font_style2">Web Interface features</a>
                 </li>
                 <li>
                     <a href="#dashboard" class="font_style2_1" onMouseOver='this.innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Dashboard & files "' onMouseOut='this.innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dashboard & files"'>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dashboard & files</a>
@@ -276,8 +296,13 @@
                     <a href="#api_summary" class="font_style2">API Summary </a>
                 </li> 
             </ul>
-
-                <table height=98% style="margin-left:20px;"> <td class="bd" style=" font-family: 'Roboto', serif;font-size:15px;font-weight: 400;color :rgb(153,153,153);"> version 1.4 </td></table> 
+                
+            
+            <table height=98% style="margin-left:20px;"> <tr><td class="bd" style=" font-family: 'Roboto', serif;font-size:15px;font-weight: 400;color :rgb(153,153,153);"> 
+            <span class=" hidden-xs pull-left" aria-hidden="true">
+                <p>version 1.4 </p>
+            </span>
+            </td></tr></table> 
         </div>
         <!-- /#sidebar-wrapper -->
 
@@ -306,7 +331,7 @@
                    targeted for on-premise dedicated deployment as a Corporate Dropbox. </p>
                
                    <p class="font_style3_1"> The main target customers for Cloudike Enterprise are: Large enterprises requiring internal Dropbox substitute, 
-                    with enhanced security, user management and <br> integration possibilities. </p>
+                    with enhanced security, user management and integration possibilities. </p>
 
                     <br>
                     <p class="font_style3_2">Cloudike’s main differentiators:</p>
@@ -394,7 +419,7 @@
                           <li class="font_style3_1 li_circle"><p> Allow PC client</p</li>
                           <li class="font_style3_1 li_circle"><p> User mobile Web/App</p</li>
                           <li class="font_style3_1 li_circle"><p> Use Watermark</p</li>
-                          <li class="font_style3_1 li_circle"><p> Ip restruction</p</li>
+                          <li class="font_style3_1 li_circle"><p> Ip restriction</p</li>
                             </ul>
 
                        <li class="font_style3_1 li_disc"> <p> Set Quota Size, GB </p> </li>
@@ -686,7 +711,7 @@
                      </ul><br>
 
                     <li class="font_style3_1 li_numberStyle"> <p> Share file or folder to social networks <p> </li>
-                        <ul>
+                        <ul>  
                         <li class="font_style3_1 li_disc"> <p> via external apps (Android only) </p> </li>  
                      </ul><br>
                     
@@ -708,7 +733,7 @@
                         <li class="font_style3_1 li_disc"> <p> When files from the Cloud are edited in external application, 
                             <br> changes saved back to the Cloud automatically (Android only) </p> </li>
                      </ul><br>
-                    <li class="font_style3_1 li_numberStyle"> <p> Single and bulk uploda of files, photoes and videos <p> </li>
+                    <li class="font_style3_1 li_numberStyle"> <p> Single and bulk upload of files, photoes and videos <p> </li>
                         <ul>
                         <li class="font_style3_1 li_disc"> <p> File extensions :  </p> </li>
                                 <ul>
@@ -1110,7 +1135,18 @@
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
+    
+    $('.sidebar-nav').click(function(e){
+        $("#wrapper").removeClass("toggled");
+    });
+
+    $('#page-content-wrapper').click(function(e){
+        e.preventDefault();
+        $("#wrapper").removeClass("toggled");
+    });
+    
 </script>
+
 </body>
 
 </html>
